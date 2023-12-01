@@ -27,3 +27,10 @@ jobs:
       - name: Echo for Dev
         if: github.event.inputs.environment == 'dev'
         run: echo "dev"
+
+      - name: Exit
+        run : exit 1
+
+      - name : Last
+        if: always()
+        run: echo end
